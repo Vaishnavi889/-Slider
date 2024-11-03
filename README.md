@@ -26,7 +26,7 @@ The project is built with HTML, CSS, and JavaScript. It includes:
 
 1. *Clone the repository*:
    ```bash
-   git clone https://github.com/yourusername/slide-show-pro.git
+   git clone https://github.com/Vaishnavi889/-Slider.git
 
 2. Open the index.html file in your browser to view the image slider in action.
 
