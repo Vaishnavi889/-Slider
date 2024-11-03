@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide" data-caption="Capture the moment, share the magic...">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="slide" data-caption="Together, we can conquer anything...">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="slide" data-caption="Take a seat, grab a treat...">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="caption"></div>
+        <div class="navigation">
+            <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="next" onclick="moveSlide(1)">&#10095;</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

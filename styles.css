@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for the body */
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 200vh; /* Set height to 60% of the viewport height */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: calc(100% - 20px); /* Reduce height to allow for padding */
+    object-fit: cover; /* Cover the area while cropping */
+    border-radius: 10px;
+    padding-top: 100px; /* Add padding to push the image down */
+    object-position: top; /* Focus on the top part of the image */
+}
+
+
+.caption {
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    font-size: 1.4em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(10px);
+}
+
+.caption.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation span {
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    font-size: 1.5em;
+}
